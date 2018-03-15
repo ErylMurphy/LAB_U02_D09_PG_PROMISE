@@ -31,8 +31,8 @@ const connectionURL = 'postgres://localhost:5432/database-name';
 const db = pgp(connectionURL);
 ```
 
-### Models
+### Model
 - in `model.js` create a pg-promise function called `getCities` for the `/` and `/api/cities` routes with the appropriate method 
 - create a pg-promise function called `getCity` for the `/city/:id` route
 - export model.js using `module.exports` and be sure to import it into `server.js`
-- in `server.js` use the previously created pg-promise functions get data and output a response
+- in `server.js` use the previously created pg-promise functions to get data and output a response
