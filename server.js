@@ -23,7 +23,7 @@ app.get('/api/cities', (request, response) => {
     endSlice = startSlice + 100
   }
 
-  response.json(cityData.slice(startSlice, endSlice))
+  // response.json(cityData.slice(startSlice, endSlice))
 })
 
 // set up views routes
@@ -37,16 +37,16 @@ app.get('/', (request, response) => {
     startSlice = (page - 1) * 100
     endSlice = startSlice + 100
     cities = cityData.slice(startSlice, endSlice)
-    response.render('cities/index', { cities: cities })
+    // response.render('cities/index', { cities: cities })
   } else {
-    response.render('home/index', { cities: cities })
+    // response.render('home/index', { cities: cities })
   }
 })
 
 // /city/:id route
 app.get('/city/:id', (request, response) => {
   const id = parseInt(request.params.id)
-  response.render('cities/city', { city: cityData[id] })
+  // response.render('cities/city', { city: cityData[id] })
 })
 
 app.listen(PORT, () => {

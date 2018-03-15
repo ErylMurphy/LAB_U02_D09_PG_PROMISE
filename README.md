@@ -1,4 +1,4 @@
-# PG-PROMISE LAB: A Tale of Two (or 160,000) Cities
+## PG-PROMISE LAB: A Tale of Two (or 160,000) Cities...Retold
 
 For homework you created an Express web server with multiple route handlers. The data we used came from a super handy npm package named `cities.json`. For this lab we will talk to a local database instead using `pg-promise`.
 
@@ -14,11 +14,11 @@ country VARCHAR(255),
 lat INTEGER,
 lng INTEGER
 ```
-- Add some data into your database, make sure to run some tests and make sure the database is set up correctly
+- Add some data into your database, make sure to run some queries and ensure the database is set up properly
 
 ### Configuration
-- now run `npm install --save pg-promise`
-- now paste the below code under your `const = express...` code and modify with your port number and database name 
+- leave postgres, run `npm install --save pg-promise` in the root of your app file structure
+- create a `model.js` file, and paste the below code in `model.js` and modify it with your port number and database name 
 
 ``` js
 // Import pg-promise and initialize the library with an empty object.
@@ -31,4 +31,8 @@ const connectionURL = 'postgres://localhost:5432/database-name';
 const db = pgp(connectionURL);
 ```
 
-### Make SQL Queries
+### Models
+- in `model.js` create a pg-promise function called `getCities` for the `/` and `/api/cities` routes with the appropriate method 
+- create a pg-promise function called `getCity` for the `/city/:id` route
+- export model.js using `module.exports` and be sure to import it into `server.js`
+- in `server.js` use the previously created pg-promise functions get data and output a response
