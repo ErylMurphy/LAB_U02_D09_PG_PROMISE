@@ -17,18 +17,34 @@ lng INTEGER
 - Add some data into your database, make sure to run some queries and ensure the database is set up properly
 
 ### Configuration
-- leave postgres, run `npm install --save pg-promise` in the root of your app file structure
+- leave postgres, run `npm install --save pg-promise bluebird pg-monitor` in the root of your app file structure
 - create a `model.js` file, and paste the below code in `model.js` and modify it with your port number and database name 
 
 ``` js
+const promise = require("bluebird");
+const monitor = require("pg-monitor");
+
+promise.config({
+  longStackTraces: true // WARNING: Do not set this option in production!
+});
+
+const initOptions = {
+  promiseLib: promise
+};
+
+// attach to all events at once;
+monitor.attach(initOptions, ['query', 'error']);
+
 // Import pg-promise and initialize the library with an empty object.
-const pgp = require('pg-promise')({});
+const pgp = require("pg-promise")(initOptions);
 
 // Prepare the connection URL from the format: 'postgres://username:password@host:port/database';
 const connectionURL = 'postgres://localhost:5432/database-name';
 
 // Creating a new database connection with the provided URL.
 const db = pgp(connectionURL);
+
+module.exports = db;
 ```
 
 ### Model
