@@ -10,7 +10,7 @@ Install dependencies
 npm install
 ```
 
-Create a `client/config.js` file. [Sign up for Mapbox](https://www.mapbox.com/) and get an API key. Put the API key inside of `client/config.js` in this format:
+Create a `client/javascript/config.js` file. [Sign up for Mapbox](https://www.mapbox.com/) and get an API key. Put the API key inside of `client/javascript/config.js` in this format:
 
 ```js
 window.accessToken = "YOUR API KEY HERE IN THIS STRING";
