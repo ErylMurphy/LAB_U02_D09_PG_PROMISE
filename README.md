@@ -2,7 +2,7 @@
 
 In this lab we'll create a database of museums in New York and display them on a map!
 
-## Basic setup:
+## NPM deps
 
 Install dependencies
 
@@ -10,7 +10,11 @@ Install dependencies
 npm install
 ```
 
-Create a `client/javascript/config.js` file. [Sign up for Mapbox](https://www.mapbox.com/) and get an API key. Put the API key inside of `client/javascript/config.js` in this format:
+## API key setup
+
+[Sign up for Mapbox](https://www.mapbox.com/) and get an API key, which hosts image tiles of the map.
+
+Create a `client/javascript/config.js` file.  Put the API key inside of `client/javascript/config.js` in this format:
 
 ```js
 window.accessToken = "YOUR API KEY HERE IN THIS STRING";
@@ -39,7 +43,7 @@ You should see a map of New York when you visit [`http://localhost:4567/cities`]
         longitude NUMERIC(7, 5)
         ```
 
-*   In the `database/seed.sql` file, insert a few museums in New York. You'll need to get the latitude and longitude for each museum, which you can get with [this Geocoding tool](http://www.gpsvisualizer.com/geocode)!
+*   In the `database/seed.sql` file, insert a few museums you like in New York, or find some you might be interested in. You'll need to get the latitude and longitude for each museum, which you can get with [this Geocoding tool](http://www.gpsvisualizer.com/geocode)!
 
 *   Run your schema and seed files.
 
