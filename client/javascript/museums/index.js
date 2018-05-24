@@ -1,4 +1,4 @@
-// Create a map that displays on the page.
+// Create a Leaflet map that displays on the page.
 const mymap = L.map("mapid").setView([40.7128, -74.006], 11);
 
 // Use tiles from Mapbox.
