@@ -1,7 +1,6 @@
 const express = require("express");
-const Museum = require("./models/Museum");
-// set up port
-const PORT = 4567;
+
+const PORT = process.env.PORT || 4567;
 
 // initialize app
 const app = express();
