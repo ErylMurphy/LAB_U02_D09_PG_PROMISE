@@ -1,6 +1,5 @@
 const express = require("express");
-const cityData = require("museums.json");
-
+const Museum = require("./models/Museum");
 // set up port
 const PORT = 4567;
 

@@ -1,5 +1,7 @@
+// Create a map that displays on the page.
 const mymap = L.map("mapid").setView([40.7128, -74.006], 11);
 
+// Use tiles from Mapbox.
 L.tileLayer(
   "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}",
   {
