@@ -72,10 +72,12 @@ const db = pgp(connectionURL);
 module.exports = db;
 ```
 
-## Model
-
 *   Create a `models/museum.js` file
-*   Define `find`, `all`
-*   create a pg-promise function called `getCity` for the `/city/:id` route
-*   export model.js using `module.exports` and be sure to import it into `server.js`
-*   in `server.js` use the previously created pg-promise functions to get data and output a response
+*   Define a `Museum.all` method that resolves a promise with all museums.
+*   Fill out the `GET museums.json` route in `server.js` to respond with the JSON of all museums in the database
+*   `client/script.js` is a JavaScript file loaded in the HTML file served on the website. Write a function `getMuesums()` that makes an AJAX call to the `/museums.json` endpoint to get a list of all museums.
+*   You're going to add a marker to the map for each museum. Read [the Leaflet documentation on creating markers on the map](https://leafletjs.com/examples/quick-start/#markers-circles-and-polygons), and add a marker for each museum to the map!
+
+## BONUS
+
+*   Add a popup for each of the markers, so when a user clicks on a marker it shows the name and address. Read up on [the popup documentation here](https://leafletjs.com/examples/quick-start/#working-with-popups).

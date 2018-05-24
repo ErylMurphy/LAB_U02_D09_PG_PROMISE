@@ -1,5 +1,5 @@
 const express = require("express");
-const cityData = require("cities.json");
+const cityData = require("museums.json");
 
 // set up port
 const PORT = 4567;
@@ -14,12 +14,12 @@ app.use("/client", express.static("client"));
 app.set("view engine", "ejs");
 
 // set up views routes
-app.get("/cities", (request, response) => {
-  response.render("cities/index");
+app.get("/museums", (request, response) => {
+  response.render("museums/index");
 });
 
 // set up api routes
-app.get("/cities.json", (request, response) => {});
+app.get("/museums.json", (request, response) => {});
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
