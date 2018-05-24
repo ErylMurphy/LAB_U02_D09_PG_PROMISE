@@ -26,7 +26,7 @@ Start the web server
 nodemon server.js
 ```
 
-You should see a map of New York when you visit [`http://localhost:4567/cities`](http://localhost:4567/cities)
+You should see a map of New York when you visit [`http://localhost:4567/museums`](http://localhost:4567/museums)
 
 ## Database Setup:
 
