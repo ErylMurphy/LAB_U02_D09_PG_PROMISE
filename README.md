@@ -43,7 +43,7 @@ You should see a map of New York when you visit [`http://localhost:4567/museums`
         longitude NUMERIC(7, 5)
         ```
 
-*   In the `database/seed.sql` file, insert a few museums you like in New York, or find some you might be interested in. You'll need to get the latitude and longitude for each museum, which you can get with [this Geocoding tool](http://www.gpsvisualizer.com/geocode)!
+*   In the `database/seed.sql` file, insert a few museums you like in New York, or find some you might be interested in. You'll need to get the latitude and longitude for each museum, which you can get with [this Geocoding tool](https://google-developers.appspot.com/maps/documentation/utils/geocoder/)!
 
 *   Run your schema and seed files.
 
@@ -82,7 +82,7 @@ module.exports = db;
 *   Open the `models/Museum.js` file
 *   Define a `Museum.all` method that resolves a promise with all museums.
 *   Fill out the `GET museums.json` route in `server.js` to respond with the JSON of all museums in the database
-*   `client/javascript/museums/index.js` is a JavaScript file loaded in the HTML file served on the `/museums` page. Write a function `getMuseums()` that makes an AJAX call to the `/museums.json` endpoint to get a list of all museums.
+*   `client/javascript/museums/index.js` is a JavaScript file loaded in the HTML file served on the `/museums` page. Open it up. Write a function `getMuseums()` that returns a `fetch` call to the `/museums.json` endpoint to get a list of all museums.
 *   Create a button in the `museums/index` view
 *   Create an event listener callback function that should call `getMuseums()` and create a map marker for each of the museums.
 *   Read [the Leaflet documentation on creating markers on the map](https://leafletjs.com/examples/quick-start/#markers-circles-and-polygons).
